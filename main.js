@@ -3,13 +3,15 @@
 let n = Math.floor(Math.random() * 100 + 1); // загадывается случайное число
 //console.log("n = ", n);
 
-let isNumber = function(x) {
-    return !isNaN(parseFloat(x)) && isFinite(x);
-};
-
 let guessANum = function(){ 
     let num = prompt("Угадай число от 1 до 100");
     //console.log("num =", num);
+
+    // Создаем замыкание
+    let isNumber = function(x) {
+        return !isNaN(parseFloat(x)) && isFinite(x);
+    };
+
     if (num === null) {                 //нажата кнопка "Отмена" ил клавиша "Esc"
         alert("Игра окончена.");
     } else if (!isNumber(num)) {       // если введенное значение не является числом
