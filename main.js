@@ -10,10 +10,10 @@ let isNumber = function(x) {
 let guessANum = function(){ 
     let num = prompt("Угадай число от 1 до 100");
     //console.log("num =", num);
-    if (num === null) {
+    if (num === null) {                 //нажата кнопка "Отмена" ил клавиша "Esc"
         alert("Игра окончена.");
-    } else if (!isNumber(num)) {       // если введенное значение не является числом: 
-        alert("Введите число!")
+    } else if (!isNumber(num)) {       // если введенное значение не является числом
+        alert("Введите число!");
         guessANum();
     } else { 
         if (+num === n) {
@@ -25,7 +25,6 @@ let guessANum = function(){
             alert("Загаданное число меньше.");
             guessANum();
         } 
-        // если нажата кнопка "Отмена"
     } 
 }
 
