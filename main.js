@@ -8,7 +8,6 @@ let letsPlay = function(){
        let num = prompt("Угадай число от 1 до 100");
        //console.log("num =", num);
     
-        // Создаем замыкание
         let isNumber = function(x) {
             return !isNaN(parseFloat(x)) && isFinite(x);
         };
@@ -24,7 +23,7 @@ let letsPlay = function(){
             } else if (+num < n) {
                 alert("Загаданное число больше.");
                 guessANum();
-            } else                                                                                                                                                                                                                                                                       {
+            } else {
                 alert("Загаданное число меньше.");
                 guessANum();
             } 
